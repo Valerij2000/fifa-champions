@@ -8,7 +8,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../firebase";
-import { FlagIcon } from "react-flag-kit";
+import Flag from "react-world-flags";
 
 const CurrentChampion = () => {
   const [currentChampion, setCurrentChampion] = useState(null);
@@ -39,8 +39,12 @@ const CurrentChampion = () => {
       <Card.Body>
         <Card.Title>{`${currentChampion.firstName} ${currentChampion.lastName}`}</Card.Title>
         <Card.Text>
-          Country: {currentChampion.country} <FlagIcon code="DE" size={24} />
-          <FlagIcon code={currentChampion.country.toUpperCase()} size={24} />
+          Country: {currentChampion.country}
+          <Flag
+            code={currentChampion.country.toUpperCase()}
+            size={24}
+            className="img-flag"
+          />
           <br />
           Date: {currentChampion.date}
           <br />

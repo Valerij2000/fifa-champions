@@ -9,7 +9,7 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { db } from "../firebase";
-import { FlagIcon } from "react-flag-kit";
+import Flag from "react-world-flags";
 
 const PreviousChampions = () => {
   const [previousChampions, setPreviousChampions] = useState([]);
@@ -38,7 +38,11 @@ const PreviousChampions = () => {
         {previousChampions.map((champion) => (
           <ListGroup.Item key={champion.id}>
             {`${champion.firstName} ${champion.lastName}`} - {champion.country}{" "}
-            <FlagIcon code={champion.country.toUpperCase()} size={16} />
+            <Flag
+              code={champion.country.toUpperCase()}
+              size={16}
+              className="img-flag"
+            />
             <br />
             {champion.championship} ({champion.date})
           </ListGroup.Item>

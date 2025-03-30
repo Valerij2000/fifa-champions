@@ -8,12 +8,6 @@
   background-color: #f8f9fa;
 }
 
-@media (max-width: 768px) {
-  .app {
-    padding: 2vmin;
-  }
-}
-
 .form-container {
   background-color: white;
   padding: 20px;
@@ -29,9 +23,23 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.img-flag {
+  position: relative;
+  left: 10px;
+  bottom: 3px;
+  width: 30px;
+  height: auto;
+}
+
 @media (min-width: 992px) {
   .app>.row {
     width: 100%;
     max-width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 2vmin;
   }
 }
