@@ -5,12 +5,14 @@
   align-items: center;
   padding: 4vmin;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./football-field.jpg') no-repeat center center;
+  background-size: cover;
 }
 
 .form-container {
   background-color: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -40,6 +42,6 @@
 
 @media (max-width: 768px) {
   .app {
-    padding: 2vmin;
+    padding: 4vmin 2vmin;
   }
 }

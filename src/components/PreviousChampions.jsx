@@ -33,7 +33,7 @@ const PreviousChampions = () => {
 
   return (
     <div>
-      <h3>Previous Champions</h3>
+      <h3>Победители чемпионатов FIFA</h3>
       <ListGroup>
         {previousChampions.map((champion) => (
           <ListGroup.Item key={champion.id}>

@@ -34,21 +34,21 @@ const CurrentChampion = () => {
   if (!currentChampion) return <div>Loading...</div>;
 
   return (
-    <Card>
-      <Card.Header>Current FIFA Champion</Card.Header>
+    <Card className="mb-3">
+      <Card.Header>Действующий Champion FIFA</Card.Header>
       <Card.Body>
         <Card.Title>{`${currentChampion.firstName} ${currentChampion.lastName}`}</Card.Title>
         <Card.Text>
-          Country: {currentChampion.country}
+          Страна: {currentChampion.country}
           <Flag
             code={currentChampion.country.toUpperCase()}
             size={24}
             className="img-flag"
           />
           <br />
-          Date: {currentChampion.date}
+          Дата: {currentChampion.date}
           <br />
-          Championship: {currentChampion.championship}
+          Чемпионат: {currentChampion.championship}
         </Card.Text>
       </Card.Body>
     </Card>

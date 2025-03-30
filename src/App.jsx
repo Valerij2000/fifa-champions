@@ -12,7 +12,7 @@ function App() {
       <Row className="w-100">
         <Col lg={6} className="mb-4">
           <div className="form-container">
-            <h2 className="mb-4">Add New Champion</h2>
+            <h2 className="mb-4">Чемпион FIFA</h2>
             <ChampionForm />
           </div>
         </Col>

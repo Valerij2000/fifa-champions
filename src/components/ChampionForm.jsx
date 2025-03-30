@@ -53,7 +53,7 @@ const ChampionForm = () => {
         date: "",
         championship: "",
       });
-      toast.success("Champion added successfully!", {
+      toast.success("Чемпион добавлен успешно!", {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -63,7 +63,7 @@ const ChampionForm = () => {
         progress: undefined,
       });
     } catch (error) {
-      toast.error("Failed to add champion. Please try again.", {
+      toast.error("Произошла ошибка. Попробуйте позже.", {
         position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
@@ -98,8 +98,8 @@ const ChampionForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-2">
-        <Form.Label>First Name</Form.Label>
+      <Form.Group className="mb-3">
+        <Form.Label>Имя</Form.Label>
         <Form.Control
           type="text"
           name="firstName"
@@ -108,8 +108,8 @@ const ChampionForm = () => {
           required
         />
       </Form.Group>
-      <Form.Group className="mb-2">
-        <Form.Label>Last Name</Form.Label>
+      <Form.Group className="mb-3">
+        <Form.Label>Фамилия</Form.Label>
         <Form.Control
           type="text"
           name="lastName"
@@ -118,8 +118,8 @@ const ChampionForm = () => {
           required
         />
       </Form.Group>
-      <Form.Group className="mb-2">
-        <Form.Label>Country</Form.Label>
+      <Form.Group className="mb-3">
+        <Form.Label>Страна</Form.Label>
         <Select
           options={countryOptions}
           styles={customStyles}
@@ -128,8 +128,8 @@ const ChampionForm = () => {
           required
         />
       </Form.Group>
-      <Form.Group className="mb-2">
-        <Form.Label>Date</Form.Label>
+      <Form.Group className="mb-3">
+        <Form.Label>Дата</Form.Label>
         <Form.Control
           type="date"
           name="date"
@@ -139,17 +139,18 @@ const ChampionForm = () => {
         />
       </Form.Group>
       <Form.Group className="mb-4">
-        <Form.Label>Championship</Form.Label>
+        <Form.Label>Чемпионат</Form.Label>
         <Form.Control
           type="text"
           name="championship"
           value={champion.championship}
           onChange={handleChange}
+          placeholder="Например: Кубок Европы"
           required
         />
       </Form.Group>
-      <Button variant="primary" type="submit">
-        Add Champion
+      <Button variant="danger" type="submit">
+        Добавить
       </Button>
       <ToastContainer />
     </Form>
