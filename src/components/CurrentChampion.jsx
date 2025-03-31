@@ -31,7 +31,7 @@ const CurrentChampion = () => {
     return () => unsubscribe();
   }, []);
 
-  if (!currentChampion) return <div>Loading...</div>;
+  if (!currentChampion) return <div>Загрузка...</div>;
 
   return (
     <Card className="mb-3">
